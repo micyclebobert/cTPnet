@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 
-export("cTPnet","preprocess_seurat2","preprocess_seurat3","preprocess_matrix",
-"postprocess_seurat2","postprocess_seurat3","postprocess_matrix")
+export("cTPnet","preprocess_seurat2","preprocess_seurat3","preprocess_seurat4","preprocess_seurat5","preprocess_matrix",
+"postprocess_seurat2","postprocess_seurat3","postprocess_seurat4","postprocess_seurat5","postprocess_matrix")
