@@ -2,7 +2,7 @@
 #'
 #' @param data data file: can be Seurat object, a matrix or a dataframe.
 #' @param data_type specify type of data.Need to be one of the four
-#' options: Seurat2, Seurat3, matrix, dataframe. You can check your
+#' options: Seurat2, Seurat3, Seurat4, Seurat5, matrix, dataframe. You can check your
 #' Seurat version by sessionInfo()'
 #' @param model_file_path str: indicate the path to the trained cTPnet pytorch
 #' model for the prediction
@@ -15,6 +15,10 @@ cTPnet=function(data,data_type='Seurat2',model_file_path,dprotein=24){
 		X=preprocess_seurat2(data, dprotein)
 	}else if(data_type=='Seurat3'){
 		X=preprocess_seurat3(data, dprotein)
+	}else if(data_type=='Seurat4'){
+		X=preprocess_seurat4(data, dprotein)
+	}else if(data_type=='Seurat5'){
+		X=preprocess_seurat5(data, dprotein)
 	}else if (data_type=='matrix'|data_type=='dataframe'){
 		X=preprocess_matrix(data, dprotein)
 	}else{
@@ -30,6 +34,10 @@ cTPnet=function(data,data_type='Seurat2',model_file_path,dprotein=24){
 	  data=postprocess_seurat2(data,y_pred)
 	}else if(data_type=='Seurat3'){
 	  data=postprocess_seurat3(data,y_pred)
+	}else if(data_type=='Seurat4'){
+	  data=postprocess_seurat4(data,y_pred)
+	}else if(data_type=='Seurat5'){
+	  data=postprocess_seurat5(data,y_pred)
 	}else{
 	  data=postprocess_matrix(y_pred)
 	}
