@@ -10,7 +10,7 @@ cTPnet(data, data_type = "Seurat2", model_file_path)
 \item{data}{data file: can be Seurat object, a matrix or a dataframe.}
 
 \item{data_type}{specify type of data.Need to be one of the four
-options: Seurat2, Seurat3, matrix, dataframe. You can check your
+options: Seurat2, Seurat3, Seurat4, Seurat5, matrix, dataframe. You can check your
 Seurat version by sessionInfo()'}
 
 \item{model_file_path}{str: indicate the path to the trained cTPnet pytorch
