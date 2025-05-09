@@ -23,7 +23,7 @@ cTPnet=function(data,data_type='Seurat2',model_file_path,dprotein=24){
 		X=preprocess_matrix(data, dprotein)
 	}else{
 		stop('Error: unrecognizable data_type argument. Need to be one of the four\n
-		      options: Seurat2, Seurat3, matrix, dataframe. You can check your \n
+		      options: Seurat2, Seurat3, Seurat4, Seurat5, matrix, dataframe. You can check your \n
 		      Seurat version by sessionInfo()\n')
 	}
   cat('Start imputation. Running python ...\n')
