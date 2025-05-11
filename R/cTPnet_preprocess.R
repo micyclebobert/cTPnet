@@ -51,7 +51,7 @@ preprocess_seurat5=function(seurat_data,dprotein){
     }else{
     	stop('Error: unrecognizable number of protein. Need to be 12 or 24\n')
     }
-	data=as.data.frame(as.matrix(GetAssayData(seurat_data, slot = "counts")))
+	data=as.data.frame(as.matrix(GetAssayData(seurat_data, layer = "counts")))
 	data=data[shared_gene,]
 	data[is.na(data)]=0.0
 	rownames(data)=shared_gene
